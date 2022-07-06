@@ -47,6 +47,9 @@ $options->addClass(['color-blue', 'extra-class']);
 // change the icon size:
 $options->setRatio(2);
 
+// use large icon:
+$options->setHeight(24);
+
 $icon = $octicon->icon('gear', $options);
 
 echo 'Icon width: '.$icon->getWidth();   // 28
@@ -62,7 +65,9 @@ Display an icon: {{ octicon("gear") }}
 
 Display an icon with extra css classes: {{ octicon("gear", 'background-red') }}
 
-Display an extra large icon: {{ octicon("gear", '', 2) }}
+Display 24px version of icon (default: 16px) : {{ octicon("gear", '', 24) }}
+
+Display an extra large icon: {{ octicon("gear", '', 16, 2) }}
 ```
 
 ## Tests
